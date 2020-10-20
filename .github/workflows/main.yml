@@ -9,7 +9,7 @@ jobs:
     name: A job to say hello
     steps:
     - uses: actions/checkout@v2
-    - uses: zhanghongtong/upload-release-asset
+    - uses: zhanghongtong/upload-release-asset@v1
       with:
         repo: test-trello
         path: ./*
