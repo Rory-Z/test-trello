@@ -1,0 +1,17 @@
+on:
+  release:
+      types:
+         _ published 
+
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+    - uses: actions/checkout@v2
+    - uses: zhanghongtong/upload-release-asset
+      with:
+        repo: test-trello
+        path: ./*
+        token: ${{ secrets.AccessToken }}
+
